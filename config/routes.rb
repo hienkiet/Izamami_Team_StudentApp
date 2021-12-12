@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :subjects
   get 'users/index'
   resources :students
   resources :users, :only =>[:show]
