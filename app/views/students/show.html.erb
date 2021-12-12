@@ -1,0 +1,28 @@
+<br/>
+<br/>
+<br/>
+<br/>
+<div class="jumbotron" style="text-align:center">
+  <h1 class="display-4">
+    <%= @student.first_name %>
+    <%= @student.last_name %>
+  </h1>
+  <p class="lead">
+    <%= @student.email %> |
+    <%= @student.phone %> |
+    <%= @student.address %> |
+    <%= @student.twitter %>
+  </p>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <%= link_to 'Edit', edit_student_path(@student), class:"btn btn-secondary" %> 
+  <%= link_to 'Back', students_path, class:"btn btn-dark" %>
+</div>
+
+
+
+
+

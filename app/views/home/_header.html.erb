@@ -1,0 +1,57 @@
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #e3f2fd;">
+  <div class="container-fluid">
+    <img src="https://o.remove.bg/downloads/d7f21040-b2bc-4f1d-9586-8122ff29ef2d/phong-chu-do-vinh-cuu-mangekyou-sharingan-hinh-nen-2048x1536_26-removebg-preview.png" alt="" width="81" height="56">
+    <%= link_to "Izanami", root_path, class:"navbar-brand" %>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse " id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0  ">
+        <li class="nav-item ">
+          <%= link_to "Students", students_path,class:"nav-link" %>
+        </li>
+        <li class="nav-item dropdown">
+        <button type="button" class="btn btn-secondary  dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+        Management
+        </button>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
+            <li class="nav-item" aria-current="true">
+                <%= link_to "Score", home_about_path,class:"nav-link" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "Add Student", new_student_path,class:"nav-link" %>
+            </li>
+          </ul>
+        </li>
+        
+        <li class="nav-item dropdown">
+          <button type="button" class="btn btn-info  dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+          Account
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li class="nav-item">
+              <%= link_to "Sign up", new_user_registration_path,class:"nav-link" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "Sign in", new_user_session_path,class:"nav-link" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "Sign out", destroy_user_session_path, method: :delete ,class:"nav-link" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "Edit Profile", edit_user_registration_path,class:"nav-link" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "User Profile", users_path,class:"nav-link" %>
+            </li>
+          </ul>
+        </li>
+        
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
