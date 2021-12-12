@@ -15,5 +15,16 @@
   <%= @subject.tuition %>
 </p>
 
+<p>Review From</p>
+ <%= form_with(model: @subject_review, local: true) do |form| %>
+   <div class= "field">
+     <%= form.text_area :review %>
+     <%= form.hidden_field :name, :value => @subject.name %>
+   </div>
+   <div class="actions">
+     <%= form.submit %>
+   </div>
+ <% end %>
+
 <%= link_to 'Edit', edit_subject_path(@subject) %> |
 <%= link_to 'Back', subjects_path %>
