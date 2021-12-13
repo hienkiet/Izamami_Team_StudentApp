@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :scores
   resources :subject_reviews
   resources :subjects
   get 'users/index'

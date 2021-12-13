@@ -9,6 +9,7 @@ class SubjectsController < ApplicationController
   # GET /subjects/1 or /subjects/1.json
   def show
     @subject_review = SubjectReview.new
+    @score=Score.new
   end
 
   # GET /subjects/new
