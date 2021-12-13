@@ -15,8 +15,8 @@
   <tbody>
     <% @scores.each do |score| %>
       <tr>
-        <td><%= score.student_id %></td>
-        <td><%= score.subject_id %></td>
+        <td><%= score.student.first_name if score.student %></td>
+        <td><%= score.subject.name if score.subject_id %></td>
         <td><%= score.score %></td>
         <td><%= link_to 'Show', score %></td>
         <td><%= link_to 'Edit', edit_score_path(score) %></td>
@@ -27,4 +27,4 @@
 </table>
 
 <br>
-
+<%= link_to 'New Score', new_score_path %>
