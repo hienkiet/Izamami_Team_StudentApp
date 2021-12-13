@@ -10,9 +10,9 @@
 </p>
 
 <p>
-  <strong>Score:</strong>
+  <strong>Final Score:</strong>
   <%= @score.score %>
 </p>
 
-<%= link_to 'Edit', edit_score_path(@score) %> |
-<%= link_to 'Back', scores_path %>
+<%= link_to 'Edit', edit_score_path(@score), class: "btn btn-secondary" %> |
+<%= link_to 'Back', scores_path, class: "btn btn-dark" %>
