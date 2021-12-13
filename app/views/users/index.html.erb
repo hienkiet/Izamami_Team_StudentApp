@@ -1,4 +1,19 @@
-<% @users.each do |user| %>
-  <%= user.username %><br/>
-  <%= user.email %><br/>
-<% end %>
+<table class="table table-success table-striped table-sm table-bordered table-hover">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Email</th>
+    </tr>
+  </thead>
+
+  <tbody>
+      <tr>
+        <td><%= current_user.user_name %></td>
+        <td><%= current_user.user_age %></td>
+        <td><%= current_user.email %></td>
+      </tr>
+  </tbody>
+</table>
+
+<br>
