@@ -2,7 +2,7 @@
 
 <p>
   <strong>Name:</strong>
-  <%= @subject.name %>
+  <%= @subject.name  %>
 </p>
 
 <p>
@@ -15,7 +15,7 @@
   <%= @subject.tuition %>
 </p>
 
-<p>Review From</p>
+<p>Review </p>
  <%= form_with(model: @subject_review, local: true) do |form| %>
    <div class= "field">
      <%= form.text_area :review %>

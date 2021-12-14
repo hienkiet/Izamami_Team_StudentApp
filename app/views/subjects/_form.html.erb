@@ -1,7 +1,7 @@
 <%= form_with(model: subject) do |form| %>
   <% if subject.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(subject.errors.count, "error") %> prohibited this subject from being saved:</h2>
+      <h2><%= pluralize(subject.errors.count, "error") %> found ! Please see below : </h2>
 
       <ul>
         <% subject.errors.each do |error| %>
