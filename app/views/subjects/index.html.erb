@@ -1,8 +1,9 @@
-
-
-<h1>Subjects</h1>
-
-<table class="table table-success table-striped table-sm table-bordered table-hover">
+<br/>
+<br/>
+<h1 style="color:magenta">Subjects</h1>
+<br/>
+<br/>
+<table class="table table-success table-striped table-sm table-bordered table-hover" style="text-align:center">
   <thead>
     <tr>
       <th>Name</th>
@@ -18,9 +19,9 @@
         <td><%= subject.name %></td>
         <td><%= subject.credits %></td>
         <td><%= subject.tuition %></td>
-        <td><%= link_to 'Show', subject %></td>
-        <td><%= link_to 'Edit', edit_subject_path(subject) %></td>
-        <td><%= link_to 'Destroy', subject, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', subject, class:"btn btn-outline-primary" %></td>
+        <td><%= link_to 'Edit', edit_subject_path(subject), class:"btn btn-outline-success" %></td>
+        <td><%= link_to 'Destroy', subject, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-outline-danger"  %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +29,4 @@
 
 <br>
 
-<%= link_to 'New Subject', new_subject_path, class:"btn btn-info" %>
+<%= link_to 'New Subject', new_subject_path, class:"btn btn-outline-danger" %>

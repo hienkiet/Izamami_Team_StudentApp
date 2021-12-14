@@ -1,8 +1,9 @@
-
-
-
-
-<table class="table table-success table-striped table-sm table-bordered table-hover">
+<br/>
+<br/>
+<h1 style="color:magenta">List Student In The Class</h1>
+<br/>
+<br/>
+<table class="table table-success table-striped table-sm table-bordered table-hover" style="text-align:center">
   <thead>
     <tr>
       <th>First name</th>
@@ -24,9 +25,9 @@
         <td><%= student.phone %></td>
         <td><%= student.address %></td>
         <td><%= student.twitter %></td>
-        <td><%= link_to 'Show', student %></td>
-        <td><%= link_to 'Edit', edit_student_path(student) %></td>
-        <td><%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', student, class:"btn btn-outline-primary" %></td>
+        <td><%= link_to 'Edit', edit_student_path(student), class:"btn btn-outline-success" %></td>
+        <td><%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-outline-danger" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -34,6 +35,6 @@
 
 <br>
 
-<%= link_to 'New Student', new_student_path, class:"btn btn-info" %>
+<%= link_to 'New Student', new_student_path, class:"btn btn-outline-danger" %>
 
 

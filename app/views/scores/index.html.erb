@@ -1,8 +1,11 @@
-<p id="notice"><%= notice %></p>
 
-<h1>Scores</h1>
+<br/>
+<br/>
+<h1 style="color:magenta">Scores</h1>
+<br/>
+<br/>
 
-<table class="table table-success table-striped table-sm table-bordered table-hover">
+<table class="table table-success table-striped table-sm table-bordered table-hover" style="text-align:center">
   <thead>
     <tr>
       <th>Student</th>
@@ -12,19 +15,19 @@
     </tr>
   </thead>
 
-  <tbody>
+  <tbody >
     <% @scores.each do |score| %>
       <tr>
-        <td><%= score.student.first_name if score.student %></td>
+        <td><%= score.student.first_name + " " + score.student.last_name if score.student %></td>
         <td><%= score.subject.name if score.subject_id %></td>
         <td><%= score.score %></td>
-        <td><%= link_to 'Show', score %></td>
-        <td><%= link_to 'Edit', edit_score_path(score) %></td>
-        <td><%= link_to 'Destroy', score, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', score, class:"btn btn-outline-primary" %></td>
+        <td><%= link_to 'Edit', edit_score_path(score) , class:"btn btn-outline-success"%></td>
+        <td><%= link_to 'Destroy', score, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-outline-danger" %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-<%= link_to 'New Score', new_score_path, class: "btn btn-info" %>
+<%= link_to 'New Score', new_score_path, class: "btn btn-outline-danger" %>
